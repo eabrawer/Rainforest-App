@@ -1,4 +1,15 @@
 Rainforest::Application.routes.draw do
+ 
+resources :products 
+
+# get 'products' => 'products#index' 
+# get 'products/:id' => 'products#show', :as => "product"
+# get 'products/:id/edit' => 'products#edit' 
+# patch 'products/:id' => 'products#update'
+# puts 'products/:id' => 'products#update'
+# post 'products' => 'product#create'
+# get 'products/new' => 'products#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
