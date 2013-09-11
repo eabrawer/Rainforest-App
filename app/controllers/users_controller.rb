@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
+    @user = User.new(params.require(:user).permit(:email, :password, :password_confirmation)
     if @user.save
       redirect_to products_url, :notice => "Signed up!"
     else
