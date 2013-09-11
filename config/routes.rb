@@ -1,6 +1,7 @@
 Rainforest::Application.routes.draw do
- 
+
 resources :products 
+resources :users, :only => [:new, :create]
 
 # get 'products' => 'products#index' 
 # get 'products/:id' => 'products#show', :as => "product"
