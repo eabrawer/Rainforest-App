@@ -1,14 +1,6 @@
 <h1>Sign Up</h1>
 
 <%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-  <% end %>
 
     <%= f.label :email %><br/>
     <%= f.text_field :email %>
@@ -22,3 +14,15 @@
     <%= f.submit %></div>
     
 <% end %>
+
+  <% if @user.errors.any? %>
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+
+<%= link_to "Back", products_url %>
