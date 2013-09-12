@@ -1,8 +1,15 @@
 Rainforest::Application.routes.draw do
 
+  get "reviews/show"
+  get "reviews/new"
+  get "reviews/edit"
 resources :products 
 resources :users, :only => [:new, :create]
 resources :sessions, :only => [:new, :create, :destroy]
+
+resources :products do
+    resources :reviews, :except => [:index]
+  end
 
 # get '/products' => 'products#index' 
 # get '/products/:id' => 'products#show', :as => "product"
