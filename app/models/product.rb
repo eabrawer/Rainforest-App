@@ -19,6 +19,6 @@ class Product < ActiveRecord::Base
 	# (self.price_in_cents.to_f / 100).to_s(:currency, precision 3)
 
 	has_many :reviews
-	 has_many :users :through => :reviews
+	has_many :users, :through => :reviews
 
 end
